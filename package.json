@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@discordjs/builders": "^0.11.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^12.0.3",
+    "node-fetch": "^3.1.1"
+  },
+  "name": "senjougahara",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zatzk/senjougahara-bot.git"
+  },
+  "author": "zatzk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zatzk/senjougahara-bot/issues"
+  },
+  "homepage": "https://github.com/zatzk/senjougahara-bot#readme",
+  "description": ""
+}
