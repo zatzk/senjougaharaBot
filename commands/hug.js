@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 
 
 module.exports = async function (msg, args) {
-  let keywords = 'pat';
+  let keywords = 'hug';
   let url = `http://api.nekos.fun:8080/api/${keywords}`
   let response = await fetch(url);
   let json = await response.json();
@@ -11,13 +11,13 @@ module.exports = async function (msg, args) {
 
   if(args.toString().charAt(1) === '@'){
     const embed = new MessageEmbed()
-      .setDescription(`**${msg.author.username}** fez pat pat em ${args}`)
+      .setDescription(`**${msg.author.username}** deu abracinho em ${args}`)
       .setImage(json.image)
     msg.channel.send({ embeds: [embed] });
   }
   else{
     const embed = new MessageEmbed()
-      .setDescription(`pat pat em quem? ԅ(≖‿≖ԅ)`)
+      .setDescription(`tem ninguém pra abraçar né? (¬‿¬)`)
     msg.channel.send({ embeds: [embed] });
   }
   

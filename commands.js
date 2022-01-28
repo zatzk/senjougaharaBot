@@ -2,8 +2,11 @@
 
 const gif = require('./commands/gif.js');
 const pat = require('./commands/pat.js');
+const lick = require('./commands/lick.js');
+const kiss = require('./commands/kiss.js');
+const hug = require('./commands/hug.js');
 
-const commands = {gif, pat};
+const commands = {gif, pat, lick, kiss, hug};
 
 module.exports = async function(msg) {
 
