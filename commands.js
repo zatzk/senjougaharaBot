@@ -5,8 +5,11 @@ const pat = require('./commands/pat.js');
 const lick = require('./commands/lick.js');
 const kiss = require('./commands/kiss.js');
 const hug = require('./commands/hug.js');
+const baka = require('./commands/baka.js');
+const cry = require('./commands/cry.js');
+const poke = require('./commands/poke.js');
 
-const commands = {gif, pat, lick, kiss, hug};
+const commands = {gif, pat, lick, kiss, hug, baka, cry, poke};
 
 module.exports = async function(msg) {
 
