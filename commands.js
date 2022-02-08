@@ -1,5 +1,4 @@
 //Command Handler
-
 const gif = require('./commands/gif.js');
 const pat = require('./commands/pat.js');
 const lick = require('./commands/lick.js');
@@ -15,8 +14,12 @@ const laugh = require('./commands/laugh.js');
 const feed = require('./commands/feed.js');
 const cuddle = require('./commands/cuddle.js');
 const help = require('./commands/help.js');
+const gatinho = require('./commands/gatinho.js');
 
-const commands = {gif, pat, lick, kiss, hug, baka, cry, poke, smug, slap, tickle, laugh, feed, cuddle, help};
+
+const commands = {gif, pat, lick, kiss, hug, baka, cry, poke, 
+                  smug, slap, tickle, laugh, feed, cuddle, 
+                  help, gatinho};
 
 module.exports = async function(msg) {
 
