@@ -11,6 +11,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready! 💖');
+  client.user.setActivity('NEKOPARA!', {type : 'PLAYING'} );
 });
 
 

@@ -5,8 +5,10 @@ const { MessageEmbed } = require('discord.js');
 module.exports = async function (msg, args) {
 
   const embed = new MessageEmbed()
-    .setTitle('Lista de Comandos')
-    .setDescription("```_help + [comando]``` ```_gif + [search]``` ```_baka``` ```_cry``` ```_cuddle``` ```_feed``` ```_hug``` ```_kiss``` ```_laugh``` ```_lick``` ```_pat``` ```_poke``` ```_slap``` ```_smug``` ```_tickle```")
+    .setTitle('🚩 Comandos 🚩')
+    .addField('**🍕 Misc 🍕**', '`gif`')
+    .addField('**✨ Fun ✨**', '`gatinho`, `cuddle`, `feed`, `baka`, `hug`, `cry`, `kiss`, `laugh`, `lick`, `pat`, `poke`, `slap`, `smug`, `tickle`')
+    .addField('**🎵 Music 🎵**', '`--`')
     .setColor("RANDOM")
 
   msg.channel.send({ embeds: [embed] });
