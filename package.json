@@ -1,8 +1,19 @@
 {
   "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@distube/yt-dlp": "^1.0.2",
+    "@distube/ytdl-core": "^4.11.1",
+    "discord-ytdl-core": "^5.0.4",
     "discord.js": "^13.6.0",
+    "distube": "^3.3.2",
     "dotenv": "^14.3.2",
-    "node-fetch": "^2.6.7"
+    "ffmpeg-static": "^4.4.1",
+    "libsodium-wrappers": "^0.7.9",
+    "merge-options": "^3.0.4",
+    "node-fetch": "^2.6.7",
+    "spotify-url-info": "^2.2.7",
+    "ytpl": "^2.3.0",
+    "ytsr": "^3.6.0"
   },
   "name": "senjougahara",
   "version": "1.0.0",

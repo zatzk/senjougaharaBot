@@ -1,12 +1,6 @@
-const { Client, Intents } = require('discord.js');
 require('dotenv').config();
+const client = require('./client');
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, 
-                            Intents.FLAGS.DIRECT_MESSAGES,
-                            Intents.FLAGS.GUILD_MESSAGES],
-                            partials: ['MESSAGE', 'CHANNEL'] });
-
-client.login(process.env.BOT_TOKEN);
 
 
 client.once('ready', () => {
@@ -16,8 +10,19 @@ client.once('ready', () => {
 
 
 
-const commandHandler = require('./commands');
 
+const commandHandler = require('./commands');
 
 client.on('messageCreate', commandHandler);
 
+
+
+
+
+
+
+
+
+
+
+client.login(process.env.BOT_TOKEN);
