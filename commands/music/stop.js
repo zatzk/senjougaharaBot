@@ -7,7 +7,7 @@ module.exports = async function (msg, args, distube) {
   if (userVoiceChannel.channelId === botVoiceChannel.channelId) {
     if(queue){
       distube.stop(msg);
-      msg.channel.send('Musica pausada （；´д｀）ゞ')
+      msg.channel.send('Musica parada （；´д｀）ゞ')
     }else {
       msg.channel.send('Tem nada tocando (￣o￣) . z Z')
     }  
