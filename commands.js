@@ -45,21 +45,21 @@ const distube = new DisTube(client, {searchSongs: 5,
 
 module.exports = async function(msg) {
   
-      
-  const args = msg.content
+  if(msg.content.startsWith(prefix)) {
+    const args = msg.content
         .slice(prefix.length)
         .trim()
         .split(/ +/g)
-  const command = args.shift().toLowerCase();
-  
-  if(!args.join(' ').startsWith('http')){
-    if (command in commands){
-      commands[command](msg, args, distube);
+    const command = args.shift().toLowerCase();
+    
+    if(!args.join(' ').startsWith('http')){
+      if (command in commands){
+        commands[command](msg, args, distube);
+      }
+    }else {
+      msg.channel.send('Por favorzinho, não use URLs X﹏X');
     }
-  }else {
-    msg.channel.send('Por favorzinho, não use URLs X﹏X');
   }
-  
 }
 
 
