@@ -44,8 +44,8 @@ const distube = new DisTube(client, {searchSongs: 5,
 
 
 module.exports = async function(msg) {
-  
-  if(msg.content.startsWith(prefix)) {
+   
+  if(msg.content.startsWith(prefix)) { //If the message starts with the prefix
     const args = msg.content
         .slice(prefix.length)
         .trim()
