@@ -91,7 +91,7 @@ distube
             `An error encountered: ${e.message.slice(0, 2000)}`,
         )
     })
-    .on('finish', queue => queue.textChannel?.send('Cabô as musicas <(＿　＿)>')
+    .on('finish', queue => queue.textChannel?.send('Cabô as musicas <(＿　＿)>'))
     .on('disconnect', queue =>
         queue.textChannel?.send('Desconectei ＞︿＜'),
     )
