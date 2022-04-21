@@ -10,6 +10,7 @@
     "ffmpeg-static": "^4.4.1",
     "libsodium-wrappers": "^0.7.9",
     "merge-options": "^3.0.4",
+    "nekos.life": "^2.0.9",
     "node-fetch": "^2.6.7",
     "spotify-url-info": "^2.2.7",
     "ytpl": "^2.3.0",

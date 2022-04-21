@@ -22,83 +22,31 @@ const leave = require('./commands/music/leave.js');
 const resume = require('./commands/music/resume.js');
 const skip = require('./commands/music/skip.js');
 const pause = require('./commands/music/pause.js');
+const glub = require('./commands/fun/+18/glub.js');
 
 
 const commands = {gif, pat, lick, kiss, hug, baka, cry, poke, 
                   smug, slap, tickle, laugh, feed, cuddle, 
-                  help, gatinho, play, stop, queue, leave, resume, skip, pause};
+                  help, gatinho, play, stop, queue, leave, resume, skip, pause,
+                  glub};
 
 
 
-const client = require('./client');
-const { DisTube } = require('distube');
+const distube = require('./exports/distubeExports/distubeCreate');
+const listeners = require('./exports/distubeExports/distubeListeners');
+
+
 
 const prefix = '_';
-const distube = new DisTube(client, {searchSongs: 5,
-                                    searchCooldown: 30,
-                                    leaveOnEmpty: true,
-                                    leaveOnFinish: true,
-                                    leaveOnStop: true,
-                                    });
-
-
-
 module.exports = async function(msg) {
-   
-  if(msg.content.startsWith(prefix)) { //If the message starts with the prefix
-    const args = msg.content
+      
+  const args = msg.content
         .slice(prefix.length)
         .trim()
         .split(/ +/g)
-    const command = args.shift().toLowerCase();
-    
-    if(!args.join(' ').startsWith('http')){
-      if (command in commands){
-        commands[command](msg, args, distube);
-      }
-    }else {
-      msg.channel.send('Por favorzinho, não use URLs X﹏X');
-    }
+  const command = args.shift().toLowerCase();
+  
+  if (command in commands){
+    commands[command](msg, args, distube);
   }
 }
-
-
-
-// DisTube event listeners
-distube
-    .on('playSong', (queue, song) =>
-        queue.textChannel?.send(
-            `Tocando \`${song.name}\` - \`${
-                song.formattedDuration
-            }\`\nSelecionada por: ${song.user}`,
-        ),
-    )
-    .on('addSong', (queue, song) =>
-        queue.textChannel?.send(
-            `Adicionou ${song.name} - \`${song.formattedDuration}\``,
-        ),
-    )
-    .on('addList', (queue, playlist) =>
-        queue.textChannel?.send(
-            `Adicionou \`${playlist.name}\` playlist (${
-                playlist.songs.length
-            } songs) a fila`,
-        ),
-    )
-    .on('error', (textChannel, e) => {
-        console.error(e)
-        textChannel.send(
-            `An error encountered: ${e.message.slice(0, 2000)}`,
-        )
-    })
-    .on('finish', queue => queue.textChannel?.send('Cabô as musicas <(＿　＿)>'))
-    .on('disconnect', queue =>
-        queue.textChannel?.send('Desconectei ＞︿＜'),
-    )
-    .on('empty', queue =>
-        queue.textChannel?.send(
-            'O canal está vazio (┬┬﹏┬┬) Saindo do canal...',
-        ),
-    )
-
-
