@@ -40,13 +40,15 @@ const listeners = require('./exports/distubeExports/distubeListeners');
 const prefix = '_';
 module.exports = async function(msg) {
       
-  const args = msg.content
-        .slice(prefix.length)
-        .trim()
-        .split(/ +/g)
-  const command = args.shift().toLowerCase();
-  
-  if (command in commands){
-    commands[command](msg, args, distube);
+  if(msg.content.startsWith(prefix)){
+    const args = msg.content
+          .slice(prefix.length)
+          .trim()
+          .split(/ +/g)
+    const command = args.shift().toLowerCase();
+    
+    if (command in commands){
+      commands[command](msg, args, distube);
+    }
   }
 }
