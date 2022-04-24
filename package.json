@@ -8,6 +8,7 @@
     "distube": "^3.3.2",
     "dotenv": "^14.3.2",
     "ffmpeg-static": "^4.4.1",
+    "googletrans": "^1.0.4",
     "libsodium-wrappers": "^0.7.9",
     "merge-options": "^3.0.4",
     "nekos.life": "^2.0.9",
