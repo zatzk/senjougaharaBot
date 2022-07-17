@@ -22,15 +22,13 @@ const leave = require('./commands/music/leave.js');
 const resume = require('./commands/music/resume.js');
 const skip = require('./commands/music/skip.js');
 const pause = require('./commands/music/pause.js');
-const glub = require('./commands/fun/+18/glub.js');
-const spank = require('./commands/fun/+18/spank.js');
 const tr = require('./commands/misc/tr.js');
 
 
 const commands = {gif, pat, lick, kiss, hug, baka, cry, poke, 
                   smug, slap, tickle, laugh, feed, cuddle, 
                   help, gatinho, play, stop, queue, leave, resume, skip, pause,
-                  glub, spank, tr};
+                  tr};
 
 
 
