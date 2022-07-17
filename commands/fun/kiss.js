@@ -9,7 +9,7 @@ module.exports = async function (msg, args) {
 
   const json = [await response.json(), await neko.sfw.kiss()]
   json[0] = json[0].image;
-  json[1] = json[1].url;
+  json[1] = json[1].url; 
 
   random = Math.floor(Math.random() * 2);
 
